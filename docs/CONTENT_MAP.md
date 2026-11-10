@@ -80,7 +80,7 @@
 | Факт | Статус | Источник |
 |---|---|---|
 | Хоар, МГУ, 1959, поиск слов в словаре | ✓ | [Wikipedia](https://en.wikipedia.org/wiki/Tony_Hoare), [Oxford](https://www.cs.ox.ac.uk/people/tony.hoare) |
-| Timsort, Тим Петерс, 2002; Powersort с Python 3.11 | ✓ уточнено | [Wikipedia](https://Www.Wikipedia.org/wiki/Timsort), [PyCon](https://in.pycon.org/cfp/2024/proposals/from-quicksort-to-timsort-to-powersort-unveiling-the-evolution-of-cpythons-sorting-algorithm~e73pj/) |
+| Timsort, Тим Петерс, 2002; Powersort с Python 3.11 | ✓ уточнено | [Wikipedia](https://en.wikipedia.org/wiki/Timsort), [PyCon](https://in.pycon.org/cfp/2024/proposals/from-quicksort-to-timsort-to-powersort-unveiling-the-evolution-of-cpythons-sorting-algorithm~e73pj/) |
 | AVL, 1962, первое самобалансирующееся дерево | ✓ | [Wikipedia](https://en.wikipedia.org/wiki/AVL_tree) |
 | 2²⁰ = 1 048 576 | ✓ | арифметика |
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "training-tools-python"
-version = "0.0.1"
+version = "1.0.0"
 description = "Практикум по алгоритмам и структурам данных на Python"
 readme = "README.md"
 requires-python = ">=3.11"
