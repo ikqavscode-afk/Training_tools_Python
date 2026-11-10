@@ -77,7 +77,7 @@ m03-recursion-stack/
 ├─ _template/                  шаблон нового модуля
 ├─ conftest.py                 проверка заданий: exercises.py или solutions/
 ├─ tools/                      прогресс, проверка шаблона и «нерешённых» заготовок
-├─ docs/                       требования, техдокументация, бэклог, план
+├─ docs/                       требования, техдокументация, бэклог, план, глоссарий
 ├─ assets/                     графики из demo.py
 ├─ .github/                    CI, шаблоны Issues и PR, Dependabot
 ├─ .devcontainer/              окружение для Codespaces
@@ -109,7 +109,7 @@ m03-recursion-stack/
 
 ## Документация
 
-[Требования](docs/REQUIREMENTS.md) · [Карта контента](docs/CONTENT_MAP.md) · [Техническая документация](docs/ARCHITECTURE.md) · [Бэклог](docs/BACKLOG.md) · [Scrum-план](docs/SCRUM_PLAN.md) · [История изменений](CHANGELOG.md) · [Как внести вклад](CONTRIBUTING.md)
+[Требования](docs/REQUIREMENTS.md) · [Карта контента](docs/CONTENT_MAP.md) · [Техническая документация](docs/ARCHITECTURE.md) · [Бэклог](docs/BACKLOG.md) · [Scrum-план](docs/SCRUM_PLAN.md) · [Глоссарий](docs/GLOSSARY.md) · [История изменений](CHANGELOG.md) · [Как внести вклад](CONTRIBUTING.md)
 
 ## Лицензия
 
