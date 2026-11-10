@@ -1,5 +1,8 @@
 # 🐍 Python: алгоритмы и структуры данных — практикум
 
+[![CI](https://github.com/ikqavscode-afk/Training_tools_Python/actions/workflows/ci.yml/badge.svg)](https://github.com/ikqavscode-afk/Training_tools_Python/actions/workflows/ci.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ikqavscode-afk/Training_tools_Python)
+
 Набор небольших упражнений по алгоритмам и структурам данных на чистом Python: **8 модулей, 48 заданий**.
 В каждом модуле короткая теория простыми словами, задания с автопроверкой, подсказки трёх уровней, готовое решение, демонстрация и «интересный факт».
 
@@ -15,7 +18,7 @@
 
 ## Как пользоваться
 
-1. **Откройте** репозиторий в Codespaces или клонируйте его (команды ниже).
+1. **Откройте** репозиторий в [Codespaces](https://codespaces.new/ikqavscode-afk/Training_tools_Python) или клонируйте его (команды ниже).
 2. **Выберите модуль** и прочитайте его `README.md` (около 5–10 минут).
 3. **Допишите код** в `exercises.py` и запустите проверку:
 
@@ -29,7 +32,7 @@
 ### Локальный запуск
 
 ```bash
-git clone <адрес-репозитория>
+git clone https://github.com/ikqavscode-afk/Training_tools_Python.git
 cd Training_tools_Python
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
