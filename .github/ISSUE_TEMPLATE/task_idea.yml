@@ -1,0 +1,11 @@
+name: Идея задания
+description: Предложите новое задание или тему
+labels: [enhancement, content]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Идея
+      description: Что тренируем и почему это полезно новичку
+    validations:
+      required: true

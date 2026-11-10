@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "training-tools-python"
+version = "0.0.1"
+description = "Практикум по алгоритмам и структурам данных на Python"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10", "pre-commit>=3.7"]
+demo = ["matplotlib>=3.8"]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+addopts = "-ra --import-mode=importlib"
+testpaths = ["."]
+norecursedirs = ["_template", "tools", "docs", ".git", ".venv", "assets"]
+markers = [
+    "bugfix: задание «найди ошибку» (пока ошибка не исправлена, считается «ещё не сделано»)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["_template"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
