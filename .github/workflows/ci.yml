@@ -22,7 +22,7 @@ jobs:
       - name: mypy (решения)
         run: |
           shopt -s nullglob
-          files=(m*/solutions/*.py)
+          files=(m*/solutions/*.py bonus/*/solutions/*.py)
           if [ ${#files[@]} -gt 0 ]; then mypy "${files[@]}"; fi
 
   template:

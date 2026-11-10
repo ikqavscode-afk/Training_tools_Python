@@ -48,6 +48,8 @@ flowchart LR
 ├─ conftest.py
 ├─ assets/ (графики из demo.py)
 ├─ _template/  (шаблон модуля)
+├─ _template_bonus/  (шаблон бонус-модуля)
+├─ bonus/  (бонус-модули bNN-name, появятся с v1.1; см. BONUS_MAP.md)
 └─ m01-search/ … m08-graphs/
     ├─ README.md  exercises.py  test_exercises.py  demo.py
     └─ solutions/

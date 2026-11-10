@@ -15,6 +15,7 @@ pre-commit install
 - Ветки: `feat/…`, `content/…`, `fix/…`, `docs/…`; изменения — через Pull Request.
 - Коммиты в стиле Conventional Commits: `feat(m01): add binary search exercises`.
 - Новый модуль создаётся копированием `_template/` (см. [ARCHITECTURE](docs/ARCHITECTURE.md)).
+- Бонус-модуль создаётся копированием `_template_bonus/` в `bonus/bNN-name/` (см. [карту бонусов](docs/BONUS_MAP.md)).
 - В каждом задании: ≥ 3 подсказки, тест, эталон в `solutions/`, понятные сообщения.
 - Факты проверяем и даём ссылку на источник.
 - Объяснения — простые, короткие, без лишнего жаргона.

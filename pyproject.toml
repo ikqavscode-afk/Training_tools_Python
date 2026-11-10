@@ -21,7 +21,7 @@ packages = []
 [tool.pytest.ini_options]
 addopts = "-ra --import-mode=importlib"
 testpaths = ["."]
-norecursedirs = ["_template", "tools", "docs", ".git", ".venv", "assets"]
+norecursedirs = ["_template", "_template_bonus", "tools", "docs", ".git", ".venv", "assets"]
 markers = [
     "bugfix: задание «найди ошибку» (пока ошибка не исправлена, считается «ещё не сделано»)",
 ]
@@ -29,7 +29,7 @@ markers = [
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["_template"]
+extend-exclude = ["_template", "_template_bonus"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "N"]

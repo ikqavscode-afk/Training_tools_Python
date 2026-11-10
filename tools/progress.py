@@ -1,6 +1,7 @@
 """Собирает таблицу прогресса: сколько заданий выполнено в каждом модуле.
 
 Запуск: ``python tools/progress.py``. В GitHub Actions таблица пишется в Summary.
+Основная программа и бонус-уровни показываются отдельными разделами.
 """
 
 from __future__ import annotations
@@ -13,6 +14,13 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
+BONUS_PREFIX = "bonus/"
+
+
+def module_key(nodeid: str) -> str:
+    """Ключ модуля по пути теста: ``m01-search`` или ``bonus/b01-name``."""
+    parts = nodeid.split("/")
+    return "/".join(parts[:2]) if parts[0] == "bonus" and len(parts) > 1 else parts[0]
 
 
 class Collector:
@@ -22,21 +30,29 @@ class Collector:
         )
 
     def pytest_runtest_logreport(self, report: pytest.TestReport) -> None:
-        module = report.nodeid.split("/")[0]
         if report.when == "call" or (report.when == "setup" and report.skipped):
-            self.stats[module][report.outcome] += 1
+            self.stats[module_key(report.nodeid)][report.outcome] += 1
 
 
-def render(stats: dict[str, dict[str, int]]) -> str:
+def render_table(stats: dict[str, dict[str, int]], keys: list[str]) -> str:
     lines = [
         "| Модуль | Выполнено | Не сделано | Падает |",
         "|---|---|---|---|",
     ]
-    for module in sorted(stats):
-        s = stats[module]
+    for key in keys:
+        s = stats[key]
         total = s["passed"] + s["skipped"] + s["failed"]
-        lines.append(f"| {module} | {s['passed']} / {total} | {s['skipped']} | {s['failed']} |")
+        lines.append(f"| {key} | {s['passed']} / {total} | {s['skipped']} | {s['failed']} |")
     return "\n".join(lines)
+
+
+def render(stats: dict[str, dict[str, int]]) -> str:
+    main_keys = sorted(k for k in stats if not k.startswith(BONUS_PREFIX))
+    bonus_keys = sorted(k for k in stats if k.startswith(BONUS_PREFIX))
+    sections = ["### Основная программа", render_table(stats, main_keys)]
+    if bonus_keys:
+        sections += ["", "### 🚀 Бонус-уровни", render_table(stats, bonus_keys)]
+    return "\n".join(sections)
 
 
 def main() -> int:

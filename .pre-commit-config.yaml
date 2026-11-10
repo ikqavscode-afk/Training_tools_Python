@@ -9,5 +9,5 @@ repos:
     rev: v1.11.2
     hooks:
       - id: mypy
-        files: ^m\d+-[a-z-]+/solutions/.*\.py$
+        files: ^(m\d+-[a-z0-9-]+|bonus/b\d+-[a-z0-9-]+)/solutions/.*\.py$
         args: [--strict]
