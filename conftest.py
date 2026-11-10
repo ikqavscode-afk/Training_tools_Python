@@ -83,6 +83,8 @@ def pytest_runtest_makereport(item: pytest.Item, call: pytest.CallInfo[None]) ->
         reason = "ещё не сделано"
     elif TARGET == "exercises" and item.get_closest_marker("bugfix"):
         reason = "ошибка ещё не исправлена"
+    elif TARGET == "exercises" and item.get_closest_marker("refactor"):
+        reason = "рефакторинг ещё не сделан"
     if reason:
         report.outcome = "skipped"
         report.longrepr = (str(item.path), item.location[1] or 0, reason)

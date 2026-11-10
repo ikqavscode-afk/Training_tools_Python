@@ -24,6 +24,7 @@ testpaths = ["."]
 norecursedirs = ["_template", "_template_bonus", "tools", "docs", ".git", ".venv", "assets"]
 markers = [
     "bugfix: задание «найди ошибку» (пока ошибка не исправлена, считается «ещё не сделано»)",
+    "refactor: задание-рефакторинг (пока код не переписан, считается «ещё не сделано»)",
 ]
 
 [tool.ruff]
