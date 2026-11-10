@@ -3,7 +3,7 @@
 [![CI](https://github.com/ikqavscode-afk/Training_tools_Python/actions/workflows/ci.yml/badge.svg)](https://github.com/ikqavscode-afk/Training_tools_Python/actions/workflows/ci.yml)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ikqavscode-afk/Training_tools_Python)
 
-Набор небольших упражнений по алгоритмам и структурам данных на чистом Python: **8 модулей, 48 заданий**.
+Набор небольших упражнений по алгоритмам и структурам данных на чистом Python: **8 модулей, 48 заданий** и бонус-уровни (пока b01, 7 заданий).
 В каждом модуле короткая теория простыми словами, задания с автопроверкой, подсказки трёх уровней, готовое решение, демонстрация и «интересный факт».
 
 Ничего устанавливать не нужно: откройте репозиторий в **GitHub Codespaces** (кнопка **Code → Codespaces**), и редактор с Python запустится в браузере.
